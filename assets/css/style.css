@@ -1,0 +1,61 @@
+body {
+    margin: 0; /* pour éviter les marges */
+    padding: 0;
+}
+#header{
+
+    margin-left: 30%;
+
+}
+#container{
+    margin-left: 10%;
+    width: 500px;
+    height: 600px;
+    background: #bf404a;
+    border-radius: 25px;
+
+}
+
+#whiteCube{
+    width: 260px;
+    height: 300px;
+    margin: 220px 120px;
+    background: #e6e6e6;
+    border-radius: 30px 30px 30px 80px;
+}
+#container2{
+    width: 500px;
+    height: 400px;
+    background: #bf404a;
+    border-radius: 25px;
+    margin-left: auto;
+
+}
+.align{
+
+    margin-top: 5%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+#container_pokemon_name{
+    width: 450px;
+    height: 150px;
+    background: #a2a894;
+    border-radius: 10px;
+    margin: 20px 20px 20px 20px;
+}
+
+.align_description{
+
+}
+#name{
+    margin: 20px 300px 20px 20px;
+}
+#type{
+    margin-left: 80%;
+}
+#content_img{
+    width: 200px;
+    height: 174px;
+    background:#a5ab96;
+}
