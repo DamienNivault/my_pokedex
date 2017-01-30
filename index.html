@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="script.js"></script>
     <title>POKEDEX</title>
 </head>
 <body>
@@ -12,7 +11,8 @@
     <form name="form">
         <input type="text" id="search" name="search">
         <input type="submit" id="searchButton" value="search that pokemon">
-    </form>
+         </form>
+    <p id="blockError"></p>
 </header>
 <main id="container" class="align">
     <div id="whiteCube">
@@ -23,12 +23,11 @@
 </main>
 <div id="container2" class="align">
     <div id="container_pokemon_name">
-        <span id="name">Name :</span>
+        <p id="name"  class="align_description">Name :</p><p id="pokemonName" class="align_description"></p>
         <span id="type"> Type :</span>
-        <p class="align_description"></p>
 
-        <p class="align_description"></p>
     </div>
+
 </div>
 </body>
 </html>
