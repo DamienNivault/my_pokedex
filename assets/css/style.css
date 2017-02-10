@@ -13,7 +13,6 @@ body {
 }
 
 #container {
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -30,6 +29,7 @@ body {
     font-family: "pokemonFont", serif;
     width: 200px;
     padding-top: 5%;
+    margin-left: 25%;
     font-size: 150%;
 
 }
@@ -168,7 +168,7 @@ body {
     justify-content: space-around;
     align-items: stretch;
     align-content: stretch;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 
 }
 
@@ -185,13 +185,18 @@ body {
     justify-content: center;
     align-items: center;
     align-content: stretch;
+    margin-bottom: 10%;
 
 }
 #bloc3 {
 
-    width: 50px;
-    height: 50px;
-    background: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: stretch;
+
 }
 .circleRight {
     background: blue;
@@ -230,3 +235,31 @@ body {
     height: 220px;
 }
 
+#errorBlock{
+    width: 200px;
+}
+
+#blockNumber {
+    width: 150px;
+    height: 100px;
+    background-color: green;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    border-radius: 20px 20px 20px 20px;
+}
+#whiteNumber{
+    width: 130px;
+    height:90px;
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+    text-align:center;
+    font-size: 150%;
+    font-family: "pokemonFont", serif;
+
+
+}

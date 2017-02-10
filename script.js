@@ -3,9 +3,11 @@ window.onload = function () {
     var name = document.querySelector('#pokemonName');
     var type = document.querySelector('#pokemonType');
     var circleValid = document.querySelector('#circleContainerImg');
-    var errorBlock = document.querySelector('#container_pokemon_name');
+    var errorBlock = document.querySelector('#errorBlock');
     var contentImg = document.querySelector('#containerBlack');
-   // var buttonRight =  document.querySelector('#buttonRight');
+    var contentName = document.querySelector('#name');
+    var contentType = document.querySelector('#type');
+    var containerNumber = document.querySelector('#whiteNumber');
     var pokemonReq = new XMLHttpRequest();
     pokemonReq.onload = reqListener();
     pokemonReq.open("get", "pokemons.json", true);
@@ -23,12 +25,14 @@ window.onload = function () {
                     errorBlock.innerHTML='';
                     name.innerHTML = (obj[i].name);
                     type.innerHTML = (obj[i].type);
-                    contentImg.innerHTML = '<img class="img" src="http://img.pokemondb.net/artwork/' + obj[i].name.toLowerCase().replace(". ","-").replace("\'","") + '.jpg">';
+                    var cleanPokemon = obj[i].name.toLowerCase().replace(". ","-").replace("\'","").replace('nidoran',"nidoran-m");
+                    contentImg.innerHTML = '<img class="img" src="http://img.pokemondb.net/artwork/' + cleanPokemon +'.jpg">';
                     circleValid.style.background="green";
-                   /* buttonRight.onclick= function (){
-                        contentImg.innerHTML = '<img class="img" src="http://img.pokemondb.net/artwork/' + obj[i+1].name.toLowerCase().replace(". ","-").replace("\'","") + '.jpg">';
-                        console.log(obj[i]);
-                    }*/
+                    if(isNaN(pokemon)){
+                        containerNumber.innerHTML = i;
+                    }else{
+                        containerNumber.innerHTML= obj[i].name;
+                    }
                 }
             }
             if(pokeValid === false) {
@@ -36,8 +40,8 @@ window.onload = function () {
                 {
                     errorBlock.classList.add('errorBlock');
                     errorBlock.innerHTML = pokeName + ' not found';
-                    name.innerHTML = '';
-                    type.innerHTML = '';
+                    contentName.innerHTML = '';
+                    contentType.innerHTML = '';
                     contentImg.innerHTML = '';
                     circleValid.style.background="red";
                     contentImg.innerHTML = '<img class="imgError" src="http://image.noelshack.com/fichiers/2014/28/1405038568-063.png">';
@@ -45,8 +49,8 @@ window.onload = function () {
 
                     errorBlock.classList.add('errorBlock');
                     errorBlock.innerHTML = 'Pokémon number ' +pokeName+ ' not found' ;
-                    name.innerHTML = '';
-                    type.innerHTML = '';
+                    contentName.innerHTML='';
+                    contentType.innerHTML='';
                     contentImg.innerHTML = '';
                     circleValid.style.background="red";
                     contentImg.innerHTML = '<img class="imgError" src="http://image.noelshack.com/fichiers/2014/28/1405038568-063.png">';
