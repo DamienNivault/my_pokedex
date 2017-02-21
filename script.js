@@ -2,8 +2,7 @@ window.onload = function () {
     function clearErrorBlock() {
         contentName.style.display = 'none';
         contentType.style.display = 'none';
-        contentImg.innerHTML = '';
-        attack.innerHTML = '404';
+          attack.innerHTML = '404';
         defense.innerHTML = '404';
         containerNumber.classList.add('whiteNumberError');
         containerNumber.innerHTML = 'Who ?';
@@ -57,8 +56,6 @@ window.onload = function () {
                             if (isNaN(pokemon)) {
                                 containerNumber.innerHTML = 'Id : ' + 29;
                             }
-
-
                         }else {
 
                             cleanPokemon = cleanPokemon.replace('nidoran', 'nidoran-m');
